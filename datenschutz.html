@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz — re:fade</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg:   #EDEAE4;
+            --card: #F2EFE9;
+            --txt:  #1A1B24;
+            --mut:  #6E6A63;
+            --fnt:  #A49E95;
+            --acc:  #6B639E;
+            --brd:  #D8D3CB;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg:   #18181D;
+                --card: #202026;
+                --txt:  #E2E3EE;
+                --mut:  #888693;
+                --fnt:  #4E4D5A;
+                --acc:  #9B93D4;
+                --brd:  #2E2E38;
+            }
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--txt);
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 28px 56px;
+            border-bottom: 1px solid var(--brd);
+        }
+
+        .nav-logo {
+            font-family: 'Palatino Linotype', Georgia, serif;
+            font-size: 15px;
+            font-style: italic;
+            letter-spacing: 4px;
+            color: var(--acc);
+            text-decoration: none;
+        }
+
+        .nav-back {
+            font-size: 13px;
+            color: var(--mut);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-back:hover { color: var(--txt); }
+
+        main {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 80px 24px 120px;
+        }
+
+        h1 {
+            font-family: 'Palatino Linotype', Georgia, serif;
+            font-size: 36px;
+            font-weight: normal;
+            color: var(--txt);
+            margin-bottom: 48px;
+        }
+
+        h2 {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--acc);
+            margin-top: 40px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--mut);
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--acc);
+            text-decoration: none;
+        }
+
+        a:hover { text-decoration: underline; }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: var(--brd);
+            margin: 48px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 1px solid var(--brd);
+            font-size: 12px;
+            color: var(--fnt);
+        }
+
+        @media (max-width: 600px) {
+            nav { padding: 22px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">re:fade</a>
+        <a href="index.html" class="nav-back">← Zurück</a>
+    </nav>
+
+    <main>
+        <h1>Datenschutz</h1>
+
+        <h2>Grundsatz</h2>
+        <p>re:fade wurde von Grund auf ohne Datensammlung entwickelt. Weder die App noch diese Website erheben, speichern oder übertragen personenbezogene Daten an uns.</p>
+
+        <div class="divider"></div>
+
+        <h2>Die App</h2>
+        <p>Alle Inhalte, die du in re:fade schreibst — Gedanken, Briefe, Zeitkapseln — bleiben ausschließlich auf deinem Gerät. Es gibt keinen Server, keine Cloud-Synchronisation und keinen Account.</p>
+        <p>re:fade hat keinen Zugriff auf deine Daten und kann ihn technisch auch nicht haben.</p>
+
+        <h2>Gesundheitsdaten</h2>
+        <p>Wenn du die Gesundheits-Integration aktivierst, liest die App Schlaf-, Herzfrequenz- und Schrittwerte aus der Apple Gesundheits-App. Diese Daten werden ausschließlich lokal verarbeitet und beeinflussen nur das Verblassen deiner Gedanken auf deinem Gerät. Sie werden nicht gespeichert oder übertragen.</p>
+
+        <h2>In-App-Käufe</h2>
+        <p>Käufe innerhalb der App (re:fade Pro) werden vollständig über den Apple App Store abgewickelt. Zahlungs- und Transaktionsdaten werden ausschließlich von Apple verarbeitet. Wir erhalten keinerlei personenbezogene Zahlungsdaten. Es gelten die <a href="https://www.apple.com/de/legal/privacy/" target="_blank" rel="noopener">Datenschutzrichtlinien von Apple</a>.</p>
+
+        <div class="divider"></div>
+
+        <h2>Diese Website</h2>
+        <p>Diese Website wird über GitHub Pages gehostet. GitHub kann dabei technisch bedingt Server-Logs erfassen (z. B. IP-Adressen, Zeitstempel). Wir haben auf diese Daten keinen Zugriff und verwenden sie nicht. Es gelten die <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Datenschutzbestimmungen von GitHub</a>.</p>
+        <p>Wir setzen keine Cookies, kein Tracking und keine Analyse-Tools ein.</p>
+
+        <div class="divider"></div>
+
+        <h2>Kontakt</h2>
+        <p>Bei Fragen zum Datenschutz erreichst du uns unter <a href="mailto:hallo@refade.app">hallo@refade.app</a>.</p>
+        <p>Verantwortlicher im Sinne der DSGVO: Erik Hohberg, Kühlwetterstraße 16, 40239 Düsseldorf.</p>
+    </main>
+
+    <footer>
+        re:fade · Ein Tagebuch, das vergisst. © 2026
+    </footer>
+
+</body>
+</html>
