@@ -42,17 +42,28 @@
             overflow-x: hidden;
         }
 
+        /* ── GLOBAL CENTERING ── */
+        .page-center {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
         /* ── NAV ── */
         nav {
             position: fixed;
             top: 0; left: 0; right: 0;
             z-index: 100;
+            border-bottom: 1px solid transparent;
+            transition: background 0.4s, border-color 0.4s;
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 28px 48px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 28px 56px;
-            transition: background 0.4s, border-color 0.4s;
-            border-bottom: 1px solid transparent;
         }
         nav.scrolled {
             background: rgba(237,234,228,0.88);
@@ -499,8 +510,12 @@
 
         /* ── FOOTER ── */
         footer {
-            padding: 40px 56px;
             border-top: 1px solid var(--brd);
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 48px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -538,18 +553,20 @@
         .reveal.visible { opacity: 1; transform: translateY(0); }
 
         @media (max-width: 600px) {
-            nav { padding: 22px 24px; }
-            footer { padding: 32px 24px; }
+            .nav-inner { padding: 22px 24px; }
+            .footer-inner { padding: 32px 24px; }
         }
     </style>
 </head>
 <body>
 
     <nav id="nav">
-        <a href="#" class="nav-logo">re:fade</a>
-        <div class="nav-links">
-            <a href="#features" class="nav-link">Features</a>
-            <a href="#download" class="nav-link">Download</a>
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">re:fade</a>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#download" class="nav-link">Download</a>
+            </div>
         </div>
     </nav>
 
@@ -779,8 +796,10 @@
 
     <!-- FOOTER -->
     <footer>
-        <span class="footer-logo">re:fade</span>
-        <span class="footer-note">Ein Tagebuch, das vergisst. © 2026 · <a href="impressum.html" style="color: inherit; text-decoration: none;">Impressum</a></span>
+        <div class="footer-inner">
+            <span class="footer-logo">re:fade</span>
+            <span class="footer-note">Ein Tagebuch, das vergisst. © 2026 · <a href="impressum.html" style="color: inherit; text-decoration: none;">Impressum</a></span>
+        </div>
     </footer>
 
     <script>
