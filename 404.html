@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicht gefunden — re:fade</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg:   #EDEAE4;
+            --txt:  #1A1B24;
+            --mut:  #6E6A63;
+            --fnt:  #A49E95;
+            --acc:  #6B639E;
+            --brd:  #D8D3CB;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg:   #18181D;
+                --txt:  #E2E3EE;
+                --mut:  #888693;
+                --fnt:  #4E4D5A;
+                --acc:  #9B93D4;
+                --brd:  #2E2E38;
+            }
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--txt);
+            font-family: 'Palatino Linotype', Georgia, serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 24px;
+        }
+
+        .logo {
+            font-size: 14px;
+            font-style: italic;
+            letter-spacing: 4px;
+            color: var(--acc);
+            text-decoration: none;
+            margin-bottom: 80px;
+        }
+
+        .number {
+            font-size: clamp(80px, 20vw, 140px);
+            font-style: italic;
+            color: var(--txt);
+            opacity: 0.08;
+            line-height: 1;
+            margin-bottom: -20px;
+        }
+
+        h1 {
+            font-size: clamp(22px, 5vw, 32px);
+            font-weight: normal;
+            font-style: italic;
+            color: var(--txt);
+            margin-bottom: 16px;
+        }
+
+        p {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 15px;
+            color: var(--mut);
+            line-height: 1.7;
+            max-width: 320px;
+            margin-bottom: 48px;
+        }
+
+        a.back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            color: white;
+            background: var(--acc);
+            border-radius: 100px;
+            padding: 14px 32px;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        a.back:hover { opacity: 0.85; }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="logo">re:fade</a>
+
+    <p class="number">404</p>
+    <h1>Diese Seite ist schon verblasst.</h1>
+    <p>Was du suchst, gibt es hier nicht — oder nicht mehr. Manche Dinge verschwinden eben.</p>
+    <a href="index.html" class="back">Zurück zur Startseite</a>
+
+</body>
+</html>
