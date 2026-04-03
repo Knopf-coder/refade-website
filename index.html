@@ -706,16 +706,28 @@
             gap: 48px;
         }
         .mobile-menu.open { display: flex; }
+        .mobile-menu-nav { display: flex; flex-direction: column; align-items: center; gap: 32px; }
+        .mobile-menu-legal { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+        .mobile-menu-divider { width: 32px; height: 1px; background: var(--brd); }
         .mobile-menu-link {
             font-family: 'Palatino Linotype', Georgia, serif;
-            font-size: 36px;
+            font-size: 28px;
             font-style: italic;
             color: var(--txt);
             text-decoration: none;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             transition: color 0.2s;
         }
         .mobile-menu-link:hover { color: var(--acc); }
+        .mobile-menu-link.small {
+            font-size: 13px;
+            font-style: normal;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--fnt);
+        }
+        .mobile-menu-link.small:hover { color: var(--mut); }
 
         /* ── FEATURE ICONS ── */
         .ficon svg {
@@ -740,9 +752,15 @@
 
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#features" class="mobile-menu-link" onclick="closeMobileMenu()">Features</a>
-        <a href="#download" class="mobile-menu-link" onclick="closeMobileMenu()">Download</a>
-        <a href="datenschutz.html" class="mobile-menu-link" style="font-size:20px; opacity:0.5">Datenschutz</a>
+        <div class="mobile-menu-nav">
+            <a href="#features" class="mobile-menu-link" onclick="closeMobileMenu()">Features</a>
+            <a href="#download" class="mobile-menu-link" onclick="closeMobileMenu()">Download</a>
+        </div>
+        <div class="mobile-menu-divider"></div>
+        <div class="mobile-menu-legal">
+            <a href="impressum.html" class="mobile-menu-link small">Impressum</a>
+            <a href="datenschutz.html" class="mobile-menu-link small">Datenschutz</a>
+        </div>
     </div>
 
     <nav id="nav">
